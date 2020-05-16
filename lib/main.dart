@@ -32,15 +32,17 @@ class Firstscreen extends StatelessWidget{
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(25.0),
+                  topLeft: Radius.circular(80.0),
                   
-                  bottomRight: Radius.circular(25.0)
+                  bottomRight: Radius.circular(80.0)
                 ),
-                child: Container(
-               
-                height: 100.0,
-                width: 100.0,
+                child : Card(
+                  child:  Container(
+                
+                height: 250.0,
+                width: 250.0,
                 child: Expanded(
+                  
                   child: Image.network("https://s3.amazonaws.com/zaubatrademarks/501ecc1e-75f2-46cd-956e-ba2f7632abb7.png"),
                   flex: 1,
                   
@@ -53,46 +55,31 @@ class Firstscreen extends StatelessWidget{
 
                 
               ),
+
+                )
+              
+            
               ),
-              Container(
-                  padding: EdgeInsets.all(20.0),
-                  margin: EdgeInsets.all(20.0),
-                  width: 200.0,
-                  decoration: BoxDecoration(
-                     border: Border.all(
-                        color: Colors.white,
-                        
-                     ),
-                     borderRadius: BorderRadius.all(
-                       Radius.circular(50.0)
-                     ),
-                  ), 
-
-                  child:  Center(
-                    child: ScaleAnimatedTextKit(
-               
-                
-                text: [
-                  "NEON",
-                  "ENGAGE",
-                  "INTERACT",
-                  "KNOW",
-                  "BUILD"
-                ],
-                textStyle: TextStyle(
-        fontSize: 30.0,
-        fontFamily: "Agne",
-      color: Colors.white
-    ),
-    textAlign: TextAlign.start,
-    alignment: AlignmentDirectional.topStart,
-    
-
+              SizedBox(
+                 height: 10.0,
               ),
-
-                  ),
-                  
-                  
+              Text(
+                "NEON",
+                style: TextStyle(
+                  fontSize: 50.0,
+                  fontFamily: "cursive",
+                  color: Colors.white,
+                  letterSpacing: 20.0,
+                ),
+              ),
+              Divider(
+             color: Colors.white,
+             thickness: 2.0,
+             indent: 40.0,
+             endIndent: 40.0,
+             
+             
+          
               ),
 
              
@@ -100,7 +87,7 @@ class Firstscreen extends StatelessWidget{
                 width: 300.0,
               
                 child: RaisedButton(
-                  shape: RoundedRectangleBorder(borderRadius : BorderRadius.circular(10.0) ),
+                  shape: RoundedRectangleBorder(borderRadius : BorderRadius.circular(25.0) ),
 
                 
             onPressed: () {
@@ -110,10 +97,11 @@ class Firstscreen extends StatelessWidget{
                 MaterialPageRoute(builder: (context)=>Intros()),
               );
             },
-            textColor: Colors.blue,
+            textColor: Colors.white,
             padding: const EdgeInsets.symmetric(horizontal : 70.0,vertical:20.0),
             
-            color:Colors.white,
+            color:Colors.blue,
+            hoverColor: Colors.white,
             child : Row(
               children: <Widget>[
                 Text(
@@ -132,6 +120,15 @@ class Firstscreen extends StatelessWidget{
           
             
           ),
+              ),
+              Divider(
+             color: Colors.white,
+             thickness: 1.0,
+             indent: 20.0,
+             endIndent: 20.0,
+             
+             
+          
               ),
              Container(
                width: double.infinity,
